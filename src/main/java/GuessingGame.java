@@ -1,11 +1,7 @@
 import java.util.Scanner;
-
-/**
- * Created by iyasuwatts on 10/17/17.
- */
-public class Main {
-
-    public static void main(String[] args){
+import java.lang.Math;
+public class GuessingGame{
+    public static void main(String[] args) {
 
         System.out.println("Guess a number!");
 
@@ -16,7 +12,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.println("Let's play a game...\nI'm thinking of a number between 1 and 100\n" +
                 "You have 10 tries before you lives run out!");
-        System.out.print("What is your guess?");
+    System.out.print("What is your guess?");
         while (lives > 0) {
             int guess = input.nextInt();
             if (guess == answer) {
@@ -30,12 +26,11 @@ public class Main {
                 System.out.println("Kind of a low ball! \n Try again you have " + (lives - 1) + " tries remaining!");
             }
             lives--;
-            if (lives==0) {
+                if (lives==0) {
                 System.out.println("It seems you're out of lives... BOOM!");
             }
 
 
         }
-
     }
 }
