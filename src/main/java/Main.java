@@ -6,31 +6,31 @@ public class Main {
 
         //variables
         int userGuess = 0;
-        int guesses = 0;
+        int guesses = 3;
         int min = 1;
-        int max = 100;
+        int max = 12;
         int range = max - min +1;
         int randNum = (int)(Math.random() * range) + min;
 
         //message
         System.out.println("Guess the number and be a winner!");
-        System.out.println("Type in a number between 1 and 100");
+        System.out.println("Type in a number between 1 and 12");
         System.out.println("Good Luck!");
-
+//game
         while(true) {
             userGuess = inputNumber.nextInt();
             if (randNum < userGuess) {
-                System.out.println("Apologies but that number is too big. Try again.");
-                ++guesses;
+                System.out.println("Apologies but that number is too big. " + (guesses - 1) + " tries remaining. Try again.");
+                --guesses;
             }
             if (randNum > userGuess) {
-                System.out.println("Sorry but that number is too small. Try again.");
-                ++guesses;
+                System.out.println("Sorry but that number is too small. " + (guesses - 1) + " tries remaining. Try again.");
+                --guesses;
             }
             if (randNum == userGuess) {
                 System.out.println("You got it! Congratulations!!");
                 break;}
-            if (guesses == 5){
+            if (guesses == 0){
                     System.out.println("You are out of lives. Goodbye.");
                 break;}
 
