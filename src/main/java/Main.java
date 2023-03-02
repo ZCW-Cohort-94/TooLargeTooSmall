@@ -8,8 +8,8 @@ public class Main {
         int max = 50; //maximum number for range of generation
         int numGuesses = 0; //this will track the number of user's guesses
         int guess = 0; //this will track the value of the user's guesses
-        //int answer = (int) Math.floor(Math.random() * (max - min + 1) + min); //randomly generate number between min and max
-        int answer = 5; //controlled answer value for testing
+        int answer = (int) Math.floor(Math.random() * (max - min + 1) + min); //randomly generate number between min and max
+        //int answer = 5; //controlled answer value for testing
         HashSet<Integer> guessSet = new HashSet<Integer>(); //set for storing guesses
 
         while (guess != answer) { //loop will continue until user guesses the correct value
